@@ -62,7 +62,7 @@ jobs:
         echo "::set-output name=status::success"
 
     - name: Make install
-      id: makt install
+      id: makeinstall
       run: |
         cd he-transformer/build
         make install
