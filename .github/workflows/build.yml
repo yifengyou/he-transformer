@@ -65,7 +65,7 @@ jobs:
       run: |
         wget https://github.com/bazelbuild/bazel/releases/download/0.25.2/bazel-0.25.2-installer-linux-x86_64.sh
         chmod +x ./bazel-0.25.2-installer-linux-x86_64.sh
-        bash ./bazel-0.25.2-installer-linux-x86_64.sh
+        sudo ./bazel-0.25.2-installer-linux-x86_64.sh
 
 
     - name: Clone source code
