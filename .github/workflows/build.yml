@@ -3,7 +3,7 @@ name: MY LOVE YOUYOU
 on:
   release:
     types: [published]
-    push:
+  push:
     branches:
       - master
 
