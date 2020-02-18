@@ -8,7 +8,7 @@ on:
       - master
 
 env:
-  REPO_URL: https://github.com/yifengyou/he-transformer
+  REPO_URL: https://github.com/EvonneH/he-transformer
   REPO_BRANCH: master
   DIY_SH: diy.sh
   FREE_UP_DISK: false
