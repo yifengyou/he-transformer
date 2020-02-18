@@ -10,10 +10,8 @@ on:
 env:
   REPO_URL: https://github.com/yifengyou/he-transformer
   REPO_BRANCH: master
-  DIY_SH: diy.sh
   FREE_UP_DISK: false
   UPLOAD_BUILDDIR: true
-  TZ: Asia/Shanghai
 
 jobs:
   build:
