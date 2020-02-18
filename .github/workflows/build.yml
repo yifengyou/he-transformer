@@ -27,8 +27,10 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        apt-get  update
-        apt-get  install -y build-essential asciidoc binutils bzip2 gawk \
+        sudo swapoff /swapfile
+        sudo rm -rf /swapfile /etc/apt/sources.list.d/*
+        sudo -E apt-get -qq update
+        sudo -E apt-get -qq install  build-essential asciidoc binutils bzip2 gawk \
             gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 \
             libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full \
             msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev \
@@ -41,9 +43,9 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
-        apt-add-repository "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-9 main"
-        apt-get update && apt install -y clang-9 clang-tidy-9 clang-format-9
+        wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+        sudo apt-add-repository "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-9 main"
+        sudo apt-get update && sudo apt install -y clang-9 clang-tidy-9 clang-format-9
 
     - name: For ngraph-tf integration testing
       env:
