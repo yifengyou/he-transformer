@@ -84,7 +84,7 @@ jobs:
       id: makeinstall
       run: |
         cd he-transformer/build
-        make install
+        make -j$(nproc)  install
         echo "::set-output name=status::success"
 
     - name: Organize files
